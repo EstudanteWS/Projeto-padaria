@@ -1,0 +1,49 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<br>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horário de Funcionamento</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #6c757d;
+    }
+
+    .horario {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Horário de Funcionamento</h2>
+    <p>
+      Nosso pãozinho está sempre pronto para alegrar o seu dia! Veja quando você pode nos encontrar:
+    </p>
+    <p class="horario">
+      Segunda a Sexta: 5h00 - 22h00<br>
+      Sábado e Domingo: 6h00 - 22h00<br>
+      <br>
+    (até os pãezinhos precisam de um descanso!)
+    </p>
+  </div>
+
+{% endblock %}

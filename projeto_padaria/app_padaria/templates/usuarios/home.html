@@ -1,0 +1,51 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
+
+</br>
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <a href="./listas">
+      <img src="https://st.depositphotos.com/2309453/2616/i/380/depositphotos_26164403-stock-photo-bakery-worker-stacking-bread-rolls.jpg" class="d-block mx-auto w-50" alt="">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="https://st3.depositphotos.com/13349494/17443/i/600/depositphotos_174433026-stock-photo-bread.jpg" class="d-block mx-auto w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://st3.depositphotos.com/1672917/37475/i/380/depositphotos_374755278-stock-photo-brazilian-snack-cheese-bread-pao.jpg" class="d-block mx-auto w-50" alt="...">
+    </div>
+      </a>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</br>
+
+<form id="cadastroForm" action="{% url 'listagem_usuarios' %}" method="post">
+  {% csrf_token %}
+  <div style="text-align: center;" class="container">
+    <h1>Para Realizar seus Pedidos, Cadastre-se Aqui!</h1>
+    Nome <input name="nome" class="form-control-sm" type="text">
+    Telefone <input name="telefone" class="form-control-sm telefone" type="text">
+    <button class="form-control-sm" onclick="exibirAlerta()">Enviar</button>
+  </div>
+</form>
+
+<script>
+  function exibirAlerta() {
+    
+    alert("Cadastro realizado com sucesso!");
+
+    
+  }
+</script>
+
+{% endblock %}   
